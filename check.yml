@@ -1,1 +1,7 @@
+---
 
+ - name: Check CSV file
+   hosts: all
+   become_user: true
+   roles:
+     - role_check_csv_file
