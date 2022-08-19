@@ -1,1 +1,9 @@
-
+- name: Read CSV files
+  read_csv:
+    path: C:/temp/test_1.csv
+    key: Phase Name
+  register: output
+  delegate_to: localhost
+  
+- debug: 
+    msg: output 
