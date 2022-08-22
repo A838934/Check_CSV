@@ -5,4 +5,5 @@
   delegate_to: localhost
   
 - debug: 
-   msg: output 
+   msg: 
+   - "{{ output }}" 
