@@ -1,6 +1,6 @@
 - name: Read CSV files
   read_csv:
-    path: C:/temp/test_1.csv
+   path: C:/temp/test_1.csv
   register: output
   delegate_to: localhost
   
