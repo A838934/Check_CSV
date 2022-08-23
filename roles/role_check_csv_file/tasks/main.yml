@@ -5,6 +5,10 @@
 #   delegate_to: localhost
 
 - name: Read CSV files
+  win_copy: 
+    src: test_1.csv
+    dest: C:/temp/test_1.csv
+  register: output  
   
 - name: Show Output
   debug:
