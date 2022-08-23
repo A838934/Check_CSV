@@ -4,6 +4,6 @@
   register: output
   delegate_to: localhost
   
-- debug: 
-    msg: 
-   - "{{ output }}" 
+- name: Show Output
+  debug:
+    msg: "{{ output }}" 
