@@ -1,6 +1,6 @@
 - name: Read CSV files
   read_csv:
-    path: C:/Users/Administrator/Desktop/userdetails.csv
+    path: C:/Users/Administrator/Desktop/test_1_{{ansible_hostname}}.csv
   register: output
   delegate_to: localhost
 
