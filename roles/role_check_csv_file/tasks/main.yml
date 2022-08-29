@@ -1,10 +1,19 @@
-- name: Read CSV files
-  read_csv:
-    path: C:/temp/test_1.csv
-  register: output
-  delegate_to: 192.168.90.94
+# - name: Read CSV files
+#   read_csv:
+#     path: C:/temp/test_1.csv
+#   register: output
+#   delegate_to: 192.168.90.94
+
+- name: Find out what the remote machine's mounts are
+  slurp:
+    src: C:/temp/test_1.csv
+  register: mounts
+
+- debug:
+    msg: "{{ mounts['content'] | b64decode }}"
 
 
-- name: Show Output
-  debug:
-    msg: "{{ output }}" 
+
+# - name: Show Output
+#   debug:
+#     msg: "{{ output }}" 
