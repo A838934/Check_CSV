@@ -1,15 +1,8 @@
 - name: Read CSV files
   read_csv:
-    path: C:/temp/test_1.csv
+    path: C:\temp\test_1.csv
   register: output
-  
 
-# - name: Read CSV files
-#   win_copy: 
-#     src: test_1.csv
-#     dest: C:/temp/test_1.csv
-#   register: output  
-  
 - name: Show Output
   debug:
     msg: "{{ output }}" 
