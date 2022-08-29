@@ -2,6 +2,8 @@
   read_csv:
     path: C:\temp\test_1.csv
   register: output
+  delegate_to: 192.168.90.94
+
 
 - name: Show Output
   debug:
