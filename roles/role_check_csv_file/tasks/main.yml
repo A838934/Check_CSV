@@ -10,7 +10,7 @@
   register: mounts
 
 - debug:
-    msg: "{{ mounts['content'] }}"
+    msg: "{{ mounts['content'] | b64decode }}"
 
 
 
