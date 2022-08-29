@@ -4,13 +4,13 @@
 #   register: output
 #   delegate_to: 192.168.90.94
 
-- name: Find out what the remote machine's mounts are
+- name: Read CSV file
   slurp:
     src: C:/temp/test_1.csv
-  register: mounts
+  register: output
 
 - debug:
-    msg: "{{ mounts['content'] | b64decode }}"
+    msg: "{{ output['content'] | b64decode }}"
 
 
 
