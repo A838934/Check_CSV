@@ -9,11 +9,11 @@
     src: C:/temp/test_1.csv
   register: output
 
-- debug:
-    msg: "{{ output['content'] | b64decode }}"
+# - debug:
+#     msg: "{{ output['content'] | b64decode }}"
 
 
 
-# - name: Show Output
-#   debug:
-#     msg: "{{ output }}" 
+- name: Show Output
+  debug:
+    msg: "{{ output | b64decode }}" 
