@@ -10,7 +10,7 @@
   register: mounts
 
 - debug:
-    msg: "{{ mounts }}"
+    msg: "{{ mounts['content'] }}"
 
 
 
