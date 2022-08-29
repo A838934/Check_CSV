@@ -14,12 +14,12 @@
   debug:
     msg: "{{ output['content'] | b64decode }}" 
     
-- name: Result
-  debug:
-    msg: "Success"
-  when: output.rc == 0
+# - name: Result
+#   debug:
+#     msg: "Success"
+#   when: output.rc == 0
   
-- name: Result
-  debug:
-    msg: "Failed"
-  when: output.rc != 0  
+# - name: Result
+#   debug:
+#     msg: "Failed"
+#   when: output.rc != 0  
