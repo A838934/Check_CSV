@@ -15,7 +15,7 @@
     msg: "{{ output['content'] | b64decode }}" 
     
 - name: string found
-  ansible.builtin.lineinfile:
+  lineinfile:
     name: C:/temp/test_1.csv
     line: 'one'
     state: present
