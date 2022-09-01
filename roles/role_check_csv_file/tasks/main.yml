@@ -10,17 +10,17 @@
   register: output
 
 
-# - name: Show Output
-#   debug:
-#     msg: "{{ output['content'] | b64decode }}" 
+- name: Show Output
+  debug:
+    msg: "{{ output['content'] | b64decode }}" 
     
-
-  tasks:
-    - name: string found
-      ansible.builtin.lineinfile:
-        name: "C:/temp/test_1.csv"
-        line: 'one'
-        state: present
-      check_mode: true
-      register: conf
-      failed_when: (conf is changed) or (conf is failed)
+- name: string found
+  ansible.builtin.lineinfile:
+    name: "C:/temp/test_1.csv"
+    line: 'one'
+    state: present
+  check_mode: true
+  register: conf
+  failed_when: (conf is changed) or (conf is failed)
+  
+    
