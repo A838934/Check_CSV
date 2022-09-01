@@ -23,8 +23,20 @@
 #   register: conf
 #   failed_when: (conf is changed) or (conf is failed)
   
-- name: string found    
-  win_lineinfile:
+# - name: string found    
+#   win_lineinfile:
+#     path: C:/temp/test_1.csv
+#     regex: '^Number of Phases Running'
+#     line: 'Number of Phases Running=one'
+
+- name: "Searching for a String"
+  become: yes
+  become_user: root
+  tags: example1
+  lineinfile:
     path: C:/temp/test_1.csv
-    regex: '^Number of Phases Running'
-    line: 'Number of Phases Running=one'
+    line: "one"
+    state: present
+  check_mode: yes
+  register: presence
+  failed_when: presence is changed 
