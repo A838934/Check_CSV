@@ -35,7 +35,7 @@
   tags: example1
   lineinfile:
     path: C:/temp/test_1.csv
-    line: "1"
+    line: "Number of phases running"
     state: present
     backup: yes
   check_mode: yes
