@@ -14,19 +14,19 @@
   debug:
     msg: "{{ output['content'] | b64decode }}" 
     
-- name: string found
-  lineinfile:
-    name: "C:/temp/test_1.csv"
-    line: 'Number of Phases Running=one'
-    state: present
-  check_mode: true
-  register: conf
-  
-# - name: string found    
-#   win_lineinfile:
-#     path: C:/temp/test_1.csv
-#     regex: '^Number of Phases Running'
+# - name: string found
+#   lineinfile:
+#     name: "C:/temp/test_1.csv"
 #     line: 'Number of Phases Running=one'
+#     state: present
+#   check_mode: true
+#   register: conf
+  
+- name: string found    
+  win_lineinfile:
+    path: C:/temp/test_1.csv
+    regex: '^Number of Phases Running'
+    line: 'Number of Phases Running=one'
 
 # - name: Searching for a String
 #   become: yes
