@@ -39,4 +39,4 @@
     state: present
   check_mode: yes
   register: presence
-  failed_when: presence is changed 
+  
