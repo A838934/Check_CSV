@@ -16,7 +16,7 @@
     
 - name: string found
   ansible.builtin.lineinfile:
-    name: "C:/temp/test_1.csv"
+    name: C:/temp/test_1.csv
     line: 'one'
     state: present
   check_mode: true
