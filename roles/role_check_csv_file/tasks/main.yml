@@ -29,7 +29,7 @@
 #     regex: '^Number of Phases Running'
 #     line: 'Number of Phases Running=one'
 
-- name: "Searching for a String"
+- name: Searching for a String
   become: yes
   become_user: root
   tags: example1
@@ -37,6 +37,7 @@
     path: C:/temp/test_1.csv
     line: "one"
     state: present
+    backup: yes
   check_mode: yes
   register: presence
   
