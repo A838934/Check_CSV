@@ -22,11 +22,11 @@
 #   check_mode: true
 #   register: conf
   
-- name: string found    
-  win_lineinfile:
-    path: C:/temp/test_1.csv
-    regex: '^Number of Phases Running'
-    line: 'Number of Phases Running=one'
+# - name: string found    
+#   win_lineinfile:
+#     path: C:/temp/test_1.csv
+#     regex: '^Number of Phases Running'
+#     line: 'Number of Phases Running=one'
 
 # - name: Searching for a String
 #   become: yes
@@ -39,5 +39,13 @@
 #     backup: yes
 #   check_mode: yes
 #   register: presence
+
+
+- name: Read users from CSV file and return a dictionary
+  read_csv:
+    path: C:/temp/test_1.csv
+    key: Number of Phases Running
+  register: users
+  delegate_to: localhost
 
 
