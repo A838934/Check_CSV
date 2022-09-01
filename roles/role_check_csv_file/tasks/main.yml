@@ -14,17 +14,12 @@
   debug:
     msg: "{{ output['content'] | b64decode }}" 
     
-- name: search demo
-  hosts: all
-  vars:
-    myfile: "C:/temp/test_1.csv"
-    myline: 'one'
-  become: true
+
   tasks:
     - name: string found
       ansible.builtin.lineinfile:
-        name: "{{ myfile }}"
-        line: "{{ myline }}"
+        name: "C:/temp/test_1.csv"
+        line: 'one'
         state: present
       check_mode: true
       register: conf
