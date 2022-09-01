@@ -14,14 +14,14 @@
   debug:
     msg: "{{ output['content'] | b64decode }}" 
     
-# - name: string found
-#   lineinfile:
-#     name: C:/temp/test_1.csv
-#     line: 'one'
-#     state: present
-#   check_mode: true
-#   register: conf
-#   failed_when: (conf is changed) or (conf is failed)
+- name: string found
+  lineinfile:
+    name: "C:/temp/test_1.csv"
+    line: 'one'
+    state: present
+  check_mode: true
+  register: conf
+  failed_when: (conf is changed) or (conf is failed)
   
 # - name: string found    
 #   win_lineinfile:
@@ -41,6 +41,4 @@
 #   check_mode: yes
 #   register: presence
 
-- name: check given value is present or not
-  debug: msg="The atomic number of Lithium is {{ lookup('csvfile', 'Number of phases running file=C:/temp/test_1.csv delimiter=,') }}"
-  
+
