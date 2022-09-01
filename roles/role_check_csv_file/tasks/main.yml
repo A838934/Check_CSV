@@ -17,7 +17,7 @@
 - name: string found
   lineinfile:
     name: "C:/temp/test_1.csv"
-    line: '1'
+    line: 'Number of Phases Running=1'
     state: present
   check_mode: true
   register: conf
