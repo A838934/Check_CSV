@@ -10,9 +10,9 @@
   register: output
 
 
-- name: Show Output
-  debug:
-    msg: "{{ output['content'] | b64decode }}" 
+# - name: Show Output
+#   debug:
+#     msg: "{{ output['content'] | b64decode }}" 
     
 
   tasks:
