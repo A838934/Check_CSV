@@ -35,7 +35,8 @@
   tags: example1
   lineinfile:
     path: C:/temp/test_1.csv
-    line: "one"
+    regexp: "one" 
+    #line: "one"
     state: present
     backup: yes
   check_mode: yes
