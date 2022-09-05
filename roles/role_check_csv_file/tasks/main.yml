@@ -45,7 +45,7 @@
   read_csv:
     path: test_1.csv
    # key: Number of Phases Running
-  delegate_to: localhost
   register: users
+  delegate_to: localhost
 
 
