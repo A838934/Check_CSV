@@ -7,12 +7,13 @@
 - name: Read CSV file
   slurp:
     src: C:/temp/test_1.csv
-  register: output.stdout_lines
+  register: output
 
 
 - name: Show Output
   debug:
-    msg: "{{ output['content'] | b64decode }}" 
+    var: output.stdout_lines
+  #  msg: "{{ output['content'] | b64decode }}" 
     
 # - name: string found
 #   lineinfile:
