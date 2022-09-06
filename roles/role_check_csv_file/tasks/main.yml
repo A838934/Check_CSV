@@ -12,7 +12,8 @@
 
 - name: Show Output
   debug:
-    var: output['content'] | b64decode
+    var: "{{ item }}"
+  with_items: "{{ output['content'] | b64decode }}"
   #  msg: "{{ output['content'] | b64decode }}" 
     
 # - name: string found
