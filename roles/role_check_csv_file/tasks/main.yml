@@ -9,6 +9,7 @@
 - name: Read CSV files
   read_csv:
     path: roles/role_check_csv_file/files/test_1.csv
+    key: Number of phases Runnin
   register: output
   delegate_to: localhost
 
