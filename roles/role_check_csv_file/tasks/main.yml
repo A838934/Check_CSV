@@ -41,11 +41,11 @@
 #   register: presence
 
 
-- name: Read users from CSV file and return a dictionary
-  read_csv:
-    path: test_1.csv
-   # key: Number of Phases Running
-  register: users
-  delegate_to: localhost
+# # - name: Read users from CSV file and return a dictionary
+# #   read_csv:
+# #     path: test_1.csv
+# #    # key: Number of Phases Running
+# #   register: users
+#   delegate_to: localhost
 
 
