@@ -9,7 +9,7 @@
 
 - name: Read CSV files
   read_csv:
-    path: test_1.csv
+    path: files/test_1.csv
   register: output
  
 
