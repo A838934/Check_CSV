@@ -7,23 +7,17 @@
 - name: Read CSV files
   read_csv:
     path: roles/role_check_csv_file/files/test_1.csv 
-    #key: Phase Name
+    key: Phase Name
   register: output
   delegate_to: localhost
 
-# - name: Read CSV file
-#   slurp:
-#     src: C:/temp/test_1.csv
-#   register: output
 
 
-#- name: Show Output
-- debug:
-    #msg: "{{ output }}"
-    msg: '{{ output.list.1.PhaseName }}'
-#     var: "{{ item }}"
-#   with_items: "{{ output['content'] | b64decode }}"
-  #  msg: "{{ output['content'] | b64decode }}" 
+
+- name: Show Output
+  debug:
+    msg: "{{ output }}"
+     
     
 
 
