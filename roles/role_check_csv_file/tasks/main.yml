@@ -15,7 +15,7 @@
 
 - name: check logic
   debug:
-    msg: "{{ item['Phase Name'] is failed }}"
+    msg: "{{ item['Phase Name'] }} is failed"
   with_items: "{{output.list}}"
   when: item["Number of phases Running"] == "1"
 
