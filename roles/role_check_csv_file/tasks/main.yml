@@ -5,6 +5,7 @@
     force: yes
     remote_src: yes
     mode: 0755
+  tags: copy  
    
 
 - name: Read CSV files
