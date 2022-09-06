@@ -6,10 +6,10 @@
 
 - name: Read CSV files
   read_csv:
-    path: roles/role_check_csv_file/files/test_1.csv
+    path: "{{ roles/role_check_csv_file/files/test_1.csv }}"
 #     fieldnames: Phase Name,Number of phases Runnin
-#     delimiter: ';'
-    key: Phase Name
+    delimiter: ';'
+  #  key: Phase Name
   register: output
   delegate_to: localhost
 
