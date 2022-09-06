@@ -12,7 +12,7 @@
 
 - name: Show Output
   debug:
-    var: output.stdout_lines
+    var: output['content'] | b64decode
   #  msg: "{{ output['content'] | b64decode }}" 
     
 # - name: string found
