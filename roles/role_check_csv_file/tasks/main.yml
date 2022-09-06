@@ -1,7 +1,7 @@
 - name: Copy
   win_copy:
-    src: C:\temp\test_1.csv
-    dest: roles/role_check_csv_file/files/test_1.csv
+    src: C:/temp/test_1.csv
+    dest: /tmp/test_1.csv
     force: yes
     remote_src: yes
     mode: 0755
