@@ -20,8 +20,9 @@
 
 - name: Show Output
   debug:
-    var: "{{ item }}"
-  with_items: "{{ output['content'] | b64decode }}"
+    msg: "{{ output }}"
+#     var: "{{ item }}"
+#   with_items: "{{ output['content'] | b64decode }}"
   #  msg: "{{ output['content'] | b64decode }}" 
     
 
