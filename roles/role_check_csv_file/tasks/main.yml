@@ -17,8 +17,8 @@
 #   register: output
 
 
-- name: Show Output
-  debug:
+#- name: Show Output
+- debug:
     #msg: "{{ output }}"
     msg: output.list.1.Phase Name
 #     var: "{{ item }}"
