@@ -7,7 +7,7 @@
 - name: Read CSV file
   slurp:
     src: C:/temp/test_1.csv
-  register: output.stdout_readlines
+  register: output.stdout_lines
 
 
 - name: Show Output
