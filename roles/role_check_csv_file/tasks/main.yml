@@ -8,7 +8,7 @@
 
 - name: Read CSV files
   read_csv:
-    path: C:/temp/test_1.csv
+    path: roles/role_check_csv_file/files/test_1.csv
   register: output
   delegate_to: localhost
 
