@@ -2,22 +2,24 @@
   win_copy:
     src: test_1.csv
     dest: C:/temp/test_1.csv
+    remote_src: yes
+    mode: 0755
    
 
 - name: Read CSV files
   read_csv:
-    path: roles/role_check_csv_file/files/test_1.csv 
-    key: Phase Name
+    path: test_1.csv
   register: output
-  delegate_to: localhost
+ 
 
-
-
-
-- name: Show Output
+- name: check logic
   debug:
-    msg: "{{ output }}"
-     
+    msg: "{{item['Phase Name']}} is failed"
+  with_items: "{{output.list}}"
+  when: item['Number of phases Running'] == '1'
+
+
+
     
 
 
