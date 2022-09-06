@@ -1,8 +1,16 @@
+- name: Copy
+  win_copy:
+    src: test_1.csv
+    dest: C:/temp/test_1.csv
+   
+
+
+
 - name: Read CSV files
   read_csv:
     path: C:/temp/test_1.csv
-  register: output
   delegate_to: localhost
+  register: output
 
 # - name: Read CSV file
 #   slurp:
@@ -16,38 +24,6 @@
   with_items: "{{ output['content'] | b64decode }}"
   #  msg: "{{ output['content'] | b64decode }}" 
     
-# - name: string found
-#   lineinfile:
-#     name: "C:/temp/test_1.csv"
-#     line: 'Number of Phases Running=one'
-#     state: present
-#   check_mode: true
-#   register: conf
-  
-# - name: string found    
-#   win_lineinfile:
-#     path: C:/temp/test_1.csv
-#     regex: '^Number of Phases Running'
-#     line: 'Number of Phases Running=one'
 
-# - name: Searching for a String
-#   become: yes
-#   become_user: root
-#   tags: example1
-#   lineinfile:
-#     path: C:/temp/test_1.csv
-#     line: "Number of phases running"
-#     state: present
-#     backup: yes
-#   check_mode: yes
-#   register: presence
-
-
-# # - name: Read users from CSV file and return a dictionary
-# #   read_csv:
-# #     path: test_1.csv
-# #    # key: Number of Phases Running
-# #   register: users
-#   delegate_to: localhost
 
 
