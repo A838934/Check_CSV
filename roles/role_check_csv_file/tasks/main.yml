@@ -1,9 +1,10 @@
 - name: Copy a file
   win_copy: 
    src: test_1.csv
-   dest: C:\temp\test_1.csv
+   dest: C:/temp/test_1.csv
    force: yes
    mode: 0777
+   remote_src: yes
   register: copy
   
 - debug:
