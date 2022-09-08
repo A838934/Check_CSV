@@ -1,15 +1,13 @@
-# - name: Copy
-#   win_copy:
-#     src: C:/temp/test_1.csv
-#     dest: /tmp/test_1.csv
-#     force: yes
-#     remote_src: yes
-#     mode: 0755
-#   register: copy
+- name: Copy a file
+  win_copy: 
+   src: test_1.csv
+   dest: C:/temp/test_1.csv
+   force: yes
+   mode: 0777
+  register: copy
   
-  
-# - debug:
-#     var: copy
+- debug:
+    var: copy
   
    
 
