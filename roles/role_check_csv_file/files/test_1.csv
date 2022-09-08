@@ -3,3 +3,7 @@ discovery,0
 mapping,0
 logbackup,1
 mount,0
+script,0
+validate,1
+unmount,0
+restore,1
